@@ -67,7 +67,7 @@ import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.m
   );
 
   var baseLon = -18;
-  var rotationSpeed = 2.7;
+  var rotationSpeed = 1.8;
   var baseLat = 22;
   var latAmplitude = 3;
   var clock = new THREE.Clock();

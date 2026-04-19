@@ -16,6 +16,12 @@
   display: none;
 }
 
+.emerald-link,
+.emerald-link:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
 .sr-only {
   clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
@@ -27,6 +33,53 @@
   position: absolute;
   white-space: nowrap;
   border: 0;
+}
+
+.site-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: #000;
+}
+
+.site-background__three {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+
+.site-background__three canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+}
+
+.site-background__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 1);
+  transition: background-color 900ms ease;
+}
+
+body.three-ready .site-background__three {
+  opacity: 1;
+}
+
+body.three-ready .site-background__overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.bannertop,
+.worktext,
+.container-4,
+.bodytext,
+.bodybounding {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
 }
 
 .bodytext,
